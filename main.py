@@ -1,1 +1,7 @@
-print("This is the main file")
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return{"message":"this is a job application tracker"}
