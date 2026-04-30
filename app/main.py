@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.schemas import Job
+from app.schemas import JobCreate
 from app.database import engine
 from app import models
 
@@ -11,5 +11,5 @@ def home():
     return{"message":"this is a job application tracker"}
 
 @app.post("/add_job")
-async def create_job(job : Job):
+async def create_job(job : JobCreate):
     return{"Job":job}

@@ -8,7 +8,7 @@ class JobStatus(str,Enum):
     OFFER = "Offer"
     REJECTED ="Rejected"
 
-class Job(BaseModel):
+class JobCreate(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     company :str = Field(...)
