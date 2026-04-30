@@ -1,15 +1,14 @@
 from fastapi import FastAPI
-from app.schemas import JobCreate
-from app.database import engine
-from app import models
+from app.routers import auth, users, jobs
 
 app = FastAPI()
 
-models.Base.metadata.create_all(bind=engine)
+app.include_router(auth.router)
+app.include_router(users.router)
+app.include_router(jobs.router)
+
 @app.get("/")
 def home():
-    return{"message":"this is a job application tracker"}
+    return{"message":"This is a job application tracker"}
 
-@app.post("/add_job")
-async def create_job(job : JobCreate):
-    return{"Job":job}
+
