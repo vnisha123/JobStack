@@ -10,7 +10,7 @@ A robust FastAPI-based backend service designed to help job seekers manage their
 *   **Input Validation**:  **Pydantic**.
 
 ##  Tech Stack
-*   **Language:** Python 3.x
+*   **Language:** Python 3.12.1
 *   **Framework:** FastAPI
 *   **Database:** PostgreSQL (SQLAlchemy ORM)
 *   **Security:** PyJWT, Pwdlib, Argon2
